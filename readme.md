@@ -2,7 +2,7 @@
 
 An application written for Android that can simulate CPU scheduling and Main Memory Allocation algorithms on processes.
 
-<img src="https://raw.githubusercontent.com/abila5h/ComputerArchitectureApp-Android/master/screencaps/image2.png" width="432" height="768">&nbsp;<img src="https://raw.githubusercontent.com/abila5h/ComputerArchitectureApp-Android/master/screencaps/image4.png" width="432" height="768">
+<img src="https://raw.githubusercontent.com/abila5h/ComputerArchitectureApp-Android/master/screencaps/image2.png" width="378" height="672">&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/abila5h/ComputerArchitectureApp-Android/master/screencaps/image4.png" width="378" height="672">
 
 ## Synopsis
 I was tasked to design a program using any language that would be capable of simulating CPU scheduling and memory allocation as a project for a subject in Temasek Polytechnic, CAOS (Computer Architecture and Operating Systems).
