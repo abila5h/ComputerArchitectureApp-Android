@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Computer Architecture</string>
+    <string name="title_cpu_scheduling">CPU Scheduling</string>
+    <string name="title_main_memory">Memory Allocation</string>
+    <string-array name="algorithm_select">
+        <item>FCFS</item>
+        <item>SJF (Non Preemptive)</item>
+        <item>Priority (Non Preemptive)</item>
+        <item>Round Robin</item>
+    </string-array>
+
+    <string-array name="memory_algorithm_select">
+        <item>First Fit</item>
+        <item>Best Fit</item>
+        <item>Worst Fit</item>
+    </string-array>
+
+    <string name="p">P</string>
+    <string name="emptyValues">Empty Values</string>
+    <string name="enterAllValues">Please enter all values</string>
+    <string name="okay">Okay</string>
+    <string name="ms">ms</string>
+    <string name="processText">Process :</string>
+    <string name="addProcessText">Add Process</string>
+    <string name="arrivalTimeInMs">Arrival time in ms</string>
+    <string name="burstTimeInMs">Burst time in ms</string>
+    <string name="one">1</string>
+    <string name="priority">Priority</string>
+    <string name="timeQuantum">Time Quantum</string>
+    <string name="simulate">Simulate</string>
+    <string name="reset">Reset</string>
+
+    <string name="cpuFragment">CPU Fragment</string>
+    <string name="memoryFragment">Memory Fragment</string>
+</resources>
