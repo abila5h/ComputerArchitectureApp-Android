@@ -1,7 +1,7 @@
 # Computer Architecture Application
 
 ## Synopsis
-I was tasked to develop a program in any language that is capable of simulating CPU scheduling and memory allocation as a project for a subject in Temasek Polytechnic, CAOS (Computer Architecture and Operating Systems).
+I was tasked to develop a program in any language that is capable of simulating CPU Scheduling and Memory allocation on processes as a project for a subject in Temasek Polytechnic, CAOS (Computer Architecture and Operating Systems).
 
 Hence, I decided to write an app for Android that would fulfill the requirements.
 
@@ -15,11 +15,11 @@ Hence, I decided to write an app for Android that would fulfill the requirements
 Android Studio 3.0
 
 ### Algorithms
-The application features below algorithms for simulation : 
+The below algorithms have been written and implemented in the project for simulation : 
 
 #### CPU Scheduling
 
-  - First-Come-First-Served
+  - First-Come-First-Serve
   - Shortest Job First (Non-Preemptive)
   - Priority (Non-Preemptive)
   - Round Robin
@@ -32,8 +32,6 @@ The application features below algorithms for simulation :
 ### External Libraries
 * [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) - Animated Chart Display for  Memory Allocation
 * [Shimmer](https://github.com/RomainPiel/Shimmer-android) - Shimmering Text View in CPU Scheduling
-
-
 
 
 ## Todos
