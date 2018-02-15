@@ -6,7 +6,7 @@ I was tasked to develop a program in any language that is capable of simulating 
 Hence, I decided to write an app for Android that would fulfill the requirements.
 
 ## Screenshots
-<img src="https://raw.githubusercontent.com/abila5h/ComputerArchitectureApp-Android/master/screencaps/image2.png" width="378" height="672">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/abila5h/ComputerArchitectureApp-Android/master/screencaps/image4.png" width="378" height="672">
+<img src="https://raw.githubusercontent.com/abila5h/ComputerArchitectureApp-Android/master/screencaps/process.gif" width="378" height="672">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/abila5h/ComputerArchitectureApp-Android/master/screencaps/memory.gif" width="378" height="672">
 
 
 ## Project Details
