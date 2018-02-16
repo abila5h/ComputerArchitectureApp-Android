@@ -1,7 +1,7 @@
 # Computer Architecture Application
 
 ## Synopsis
-An application for Android that simulates CPU scheduling and Memory Allocation on processes.
+An application I wrote for Android that simulates CPU scheduling and Memory Allocation on processes.
 
 This is my project for a subject in Temasek Polytechnic, CAOS (Computer Architecture and Operating Systems).
 
