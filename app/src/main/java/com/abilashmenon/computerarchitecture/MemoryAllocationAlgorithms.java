@@ -38,7 +38,7 @@ public class MemoryAllocationAlgorithms {
                         allocation.set(i, j);
                         MemoryBlock mBlock = new MemoryBlock(memBlk.get(j).getSize() - jobArr.get(i).getJobSize(), memBlk.get(j).getColor());
                         mBlock.setLocked();
-                        mBlock.setUsedPartition();
+                        mBlock.setUsedPartition(); //for external fragmentation, set a flag that the partition is used for a process
                         memBlk.set(j, mBlock);
                         break;
                     }
