@@ -46,9 +46,6 @@ public class MemoryAllocationAlgorithms {
         }
         for (int i = 0; i < n; i++) {
             jobArr.get(i).setAllocatedBlockNo(allocation.get(i));
-            if (jobArr.get(i).getAllocatedBlockNo() == -1) {
-                externalFrag += jobArr.get(i).getJobSize();
-            }
             if (jobArr.get(i).getAllocatedBlockNo() != -1) {
                 if (!memBlk.get(jobArr.get(i).getAllocatedBlockNo()).hasCalled()) {
                     internalFrag += memBlk.get(jobArr.get(i).getAllocatedBlockNo()).getSize();
@@ -82,6 +79,17 @@ public class MemoryAllocationAlgorithms {
                 }
             }
         }
+
+        for (int i = 0; i<memBlk.size(); i++){
+            for(int j=0; j<memoryBlocks.size(); j++){
+                if(memBlk.get(i).getSize()== memoryBlocks.get(j).getSize()){
+                    if(!memBlk.get(i).getIsJob()){
+                        externalFrag += memBlk.get(i).getSize();
+                    }
+                }
+            }
+        }
+
         SimulatedJob simulatedJob = new SimulatedJob(memBlk, internalFrag, externalFrag);
         simulationListener.onAlgorithmSimulationCompleted(simulatedJob);
     }
@@ -125,9 +133,7 @@ public class MemoryAllocationAlgorithms {
 
         for (int i = 0; i < n; i++) {
             jobArr.get(i).setAllocatedBlockNo(allocation.get(i));
-            if (jobArr.get(i).getAllocatedBlockNo() == -1) {
-                externalFrag += jobArr.get(i).getJobSize();
-            }
+
             if (jobArr.get(i).getAllocatedBlockNo() != -1) {
                 if (!memBlk.get(jobArr.get(i).getAllocatedBlockNo()).hasCalled()) {
                     internalFrag += memBlk.get(jobArr.get(i).getAllocatedBlockNo()).getSize();
@@ -161,6 +167,16 @@ public class MemoryAllocationAlgorithms {
                     mBlock.setJobNo("Job " + hashMap.get(allocatedBlockNo).getJobNo());
                     mBlock.setIsJob();
                     memBlk.set(allocatedBlockNo, mBlock);
+                }
+            }
+        }
+
+        for (int i = 0; i<memBlk.size(); i++){
+            for(int j=0; j<memoryBlocks.size(); j++){
+                if(memBlk.get(i).getSize()== memoryBlocks.get(j).getSize()){
+                    if(!memBlk.get(i).getIsJob()){
+                        externalFrag += memBlk.get(i).getSize();
+                    }
                 }
             }
         }
@@ -208,9 +224,6 @@ public class MemoryAllocationAlgorithms {
 
         for (int i = 0; i < n; i++) {
             jobArr.get(i).setAllocatedBlockNo(allocation.get(i));
-            if (jobArr.get(i).getAllocatedBlockNo() == -1) {
-                externalFrag += jobArr.get(i).getJobSize();
-            }
             if (jobArr.get(i).getAllocatedBlockNo() != -1) {
                 if (!memBlk.get(jobArr.get(i).getAllocatedBlockNo()).hasCalled()) {
                     internalFrag += memBlk.get(jobArr.get(i).getAllocatedBlockNo()).getSize();
@@ -244,6 +257,15 @@ public class MemoryAllocationAlgorithms {
                     mBlock.setJobNo("Job " + hashMap.get(allocatedBlockNo).getJobNo());
                     mBlock.setIsJob();
                     memBlk.set(allocatedBlockNo, mBlock);
+                }
+            }
+        }
+        for (int i = 0; i<memBlk.size(); i++){
+            for(int j=0; j<memoryBlocks.size(); j++){
+                if(memBlk.get(i).getSize()== memoryBlocks.get(j).getSize()){
+                    if(!memBlk.get(i).getIsJob()){
+                        externalFrag += memBlk.get(i).getSize();
+                    }
                 }
             }
         }
