@@ -38,6 +38,7 @@ public class MemoryAllocationAlgorithms {
                         allocation.set(i, j);
                         MemoryBlock mBlock = new MemoryBlock(memBlk.get(j).getSize() - jobArr.get(i).getJobSize(), memBlk.get(j).getColor());
                         mBlock.setLocked();
+                        mBlock.setUsedPartition();
                         memBlk.set(j, mBlock);
                         break;
                     }
@@ -69,12 +70,14 @@ public class MemoryAllocationAlgorithms {
                 if (remainingSpace != 0) {
                     MemoryBlock mBlock = new MemoryBlock(hashMap.get(allocatedBlockNo).getJobSize(), memBlk.get(allocatedBlockNo).getColor()); //+ i is used to hop as the length of mem array increases
                     mBlock.setIsJob();
+                    mBlock.setUsedPartition();
                     mBlock.setJobNo("Job " + hashMap.get(allocatedBlockNo).getJobNo());
                     memBlk.add(allocatedBlockNo, mBlock);
                 } else {
                     MemoryBlock mBlock = new MemoryBlock(hashMap.get(allocatedBlockNo).getJobSize(), memBlk.get(allocatedBlockNo).getColor());
                     mBlock.setJobNo("Job " + hashMap.get(allocatedBlockNo).getJobNo());
                     mBlock.setIsJob();
+                    mBlock.setUsedPartition();
                     memBlk.set(allocatedBlockNo, mBlock);
                 }
             }
@@ -83,7 +86,7 @@ public class MemoryAllocationAlgorithms {
         for (int i = 0; i<memBlk.size(); i++){
             for(int j=0; j<memoryBlocks.size(); j++){
                 if(memBlk.get(i).getSize()== memoryBlocks.get(j).getSize()){
-                    if(!memBlk.get(i).getIsJob()){
+                    if(!memBlk.get(i).isUsedPartition()){
                         externalFrag += memBlk.get(i).getSize();
                     }
                 }
@@ -127,6 +130,7 @@ public class MemoryAllocationAlgorithms {
                 allocation.set(i, bestIdx);
                 MemoryBlock memoryBlock = new MemoryBlock(memBlk.get(bestIdx).getSize() - jobArr.get(i).getJobSize(), memBlk.get(bestIdx).getColor());
                 // memoryBlock.setLocked();
+                memoryBlock.setUsedPartition();
                 memBlk.set(bestIdx, memoryBlock);
             }
         }
@@ -160,12 +164,14 @@ public class MemoryAllocationAlgorithms {
                 if (remainingSpace != 0) {
                     MemoryBlock mBlock = new MemoryBlock(hashMap.get(allocatedBlockNo).getJobSize(), memBlk.get(allocatedBlockNo).getColor()); //+ i is used to hop as the length of mem array increases
                     mBlock.setIsJob();
+                    mBlock.setUsedPartition();
                     mBlock.setJobNo("Job " + hashMap.get(allocatedBlockNo).getJobNo());
                     memBlk.add(allocatedBlockNo, mBlock);
                 } else {
                     MemoryBlock mBlock = new MemoryBlock(hashMap.get(allocatedBlockNo).getJobSize(), memBlk.get(allocatedBlockNo).getColor());
                     mBlock.setJobNo("Job " + hashMap.get(allocatedBlockNo).getJobNo());
                     mBlock.setIsJob();
+                    mBlock.setUsedPartition();
                     memBlk.set(allocatedBlockNo, mBlock);
                 }
             }
@@ -174,7 +180,7 @@ public class MemoryAllocationAlgorithms {
         for (int i = 0; i<memBlk.size(); i++){
             for(int j=0; j<memoryBlocks.size(); j++){
                 if(memBlk.get(i).getSize()== memoryBlocks.get(j).getSize()){
-                    if(!memBlk.get(i).getIsJob()){
+                    if(!memBlk.get(i).isUsedPartition()){
                         externalFrag += memBlk.get(i).getSize();
                     }
                 }
@@ -218,6 +224,7 @@ public class MemoryAllocationAlgorithms {
                 allocation.set(i, wstIdx);
                 MemoryBlock memoryBlock = new MemoryBlock(memBlk.get(wstIdx).getSize() - jobArr.get(i).getJobSize(), memBlk.get(wstIdx).getColor());
                 // memoryBlock.setLocked();
+                memoryBlock.setUsedPartition();
                 memBlk.set(wstIdx, memoryBlock);
             }
         }
@@ -250,12 +257,14 @@ public class MemoryAllocationAlgorithms {
                 if (remainingSpace != 0) {
                     MemoryBlock mBlock = new MemoryBlock(hashMap.get(allocatedBlockNo).getJobSize(), memBlk.get(allocatedBlockNo).getColor()); //+ i is used to hop as the length of mem array increases
                     mBlock.setIsJob();
+                    mBlock.setUsedPartition();
                     mBlock.setJobNo("Job " + hashMap.get(allocatedBlockNo).getJobNo());
                     memBlk.add(allocatedBlockNo, mBlock);
                 } else {
                     MemoryBlock mBlock = new MemoryBlock(hashMap.get(allocatedBlockNo).getJobSize(), memBlk.get(allocatedBlockNo).getColor());
                     mBlock.setJobNo("Job " + hashMap.get(allocatedBlockNo).getJobNo());
                     mBlock.setIsJob();
+                    mBlock.setUsedPartition();
                     memBlk.set(allocatedBlockNo, mBlock);
                 }
             }
@@ -263,7 +272,7 @@ public class MemoryAllocationAlgorithms {
         for (int i = 0; i<memBlk.size(); i++){
             for(int j=0; j<memoryBlocks.size(); j++){
                 if(memBlk.get(i).getSize()== memoryBlocks.get(j).getSize()){
-                    if(!memBlk.get(i).getIsJob()){
+                    if(!memBlk.get(i).isUsedPartition()){
                         externalFrag += memBlk.get(i).getSize();
                     }
                 }

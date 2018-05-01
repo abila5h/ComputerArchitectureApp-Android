@@ -9,25 +9,8 @@ public class MemoryBlock {
     private boolean isJob = false;
     private String jobNo;
     private boolean hasCalled = false;
- //   private int allocatedBlockNo;
-//
-//    public boolean isPieFlag() {
-//        return pieFlag;
-//    }
-//
-//    public void setAllocatedBlockNo(int allocatedBlockNo) {
-//        this.allocatedBlockNo = allocatedBlockNo;
-//    }
-//
-//    public int getAllocatedBlockNo() {
-//        return allocatedBlockNo;
-//    }
+    private boolean usedPartition = false;
 
-//    private boolean pieFlag = false;
-//
-//    public void setPieFlag(){
-//        this.pieFlag = true;
-//    }
 
     public boolean isLocked() {
         return locked;
@@ -40,11 +23,9 @@ public class MemoryBlock {
     private boolean locked = false;
 
 
-
-
     private int color;
 
-    public MemoryBlock(int size, int color){
+    public MemoryBlock(int size, int color) {
         this.size = size;
         this.color = color;
     }
@@ -65,12 +46,11 @@ public class MemoryBlock {
     }
 
 
-
     public void setIsJob() {
         isJob = true;
     }
 
-    public boolean getIsJob(){
+    public boolean getIsJob() {
         return isJob;
     }
 
@@ -84,7 +64,13 @@ public class MemoryBlock {
         this.jobNo = jobNo;
     }
 
+    public void setUsedPartition() {
+        usedPartition = true;
+    }
 
+    public boolean isUsedPartition() {
+        return usedPartition;
+    }
 
     public String getJobNo() {
         return jobNo;
