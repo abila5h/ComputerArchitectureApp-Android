@@ -3,7 +3,7 @@
 ## Synopsis
 An application I wrote for Android that simulates CPU scheduling and Memory Allocation on processes.
 
-This is my project for a subject in Temasek Polytechnic, CAOS (Computer Architecture and Operating Systems).
+This is my project for a subject in Temasek Polytechnic, CAOS (Computer Architecture and Operating Systems) and it received a Distinction grade.
 
 ## Screenshots
 <img src="https://raw.githubusercontent.com/abila5h/ComputerArchitectureApp-Android/master/screencaps/process.gif" width="378" height="672">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/abila5h/ComputerArchitectureApp-Android/master/screencaps/memory.gif" width="378" height="672">
